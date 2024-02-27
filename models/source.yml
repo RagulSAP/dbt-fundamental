@@ -1,0 +1,13 @@
+version: 2
+sources:
+  - name: dev
+    database: our_first_db
+    schema: dev
+    tables:
+      - name: source_1
+  
+  - name: audit
+    database: our_first_db
+    schema: audit
+    tables:
+      - name: control_table
