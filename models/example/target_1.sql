@@ -1,10 +1,14 @@
+{#
+ materialized - table, view, incremental and epheremal
+ incremental_strategy - append, merge, delete+insert and insertoverride
+#} 
  {{ 
     config
     (
      materialized='incremental',
      database='our_first_db',
      schema='dev',
-     incremental_strategy='merge',
+     incremental_strategy='merge', 
      unique_key='id',
      post_hook = "{{update_ctrl()}}"
     )
